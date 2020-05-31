@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BR - maquettage d'applications graphiques</title>
+
+  <link rel="icon" type="image/png" href="../src/images/login.png" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <section id="Projet">
+
+    <div class="form-card">
+      <div class="etapes">
+        <div id="etape1">1/3</div>
+        <div id="etape2">2/3</div>
+        <div id="etape3">3/3</div>
+      </div>
+
+      <div class="boutons">
+        <div id="btn"></div>
+        <button type="button" id="login-btn" class="changement-bouton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3" />
+            <circle cx="12" cy="10" r="3" />
+            <circle cx="12" cy="12" r="10" /></svg>
+        </button>
+        <button type="button" id="register-btn" class="changement-bouton">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="8.5" cy="7" r="4"></circle>
+            <line x1="20" y1="8" x2="20" y2="14"></line>
+            <line x1="23" y1="11" x2="17" y2="11"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="titre">
+        <div class="titreConnexion">Connexion</div>
+        <div class="titreInscription">Inscription</div>
+      </div>
+
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------PAGE DE CONNEXION ---------------------->
+      <!-- -------------------------------------------------------- -->
+
+      <form id="login" action="javascript:void(0);" class="input-groupe">
+        <input type="text" name="prenom" id="mail" class="input-champs" placeholder="Adresse e-mail" />
+        <input type="password" name="mdp"" id=" mdp" class="input-champs" placeholder="Mot de passe"
+          aria-describedby="pwdHelpBlock">
+        <!--  AFFICHER LE MOT DE PASSE EN CLAIR -->
+        <button type="button" class="eye" onclick="togglePwd('mdp');"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+            height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg></button>
+
+        <input type="checkbox" name="rappel" id="rappel" class="check-box" /><span>Se souvenir du mot de passe</span>
+        <div type="submit" id="connexion" class="submit-btn">Se connecter</div>
+        <div class="message-lien" id="noAccount">Vous n'avez pas de compte ? <a href="#">S'inscrire</a></div>
+      </form>
+
+
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------INSCRIPTION 1/3  ---------------------->
+      <!-- -------------------------------------------------------- -->
+
+
+      <form id="register1" action="javascript:void(0);" class="input-groupe">
+        <input type="text" name="prenom" id="prenom" class="input-champs" placeholder="Entrez votre prénom..." />
+        <input type="text" name="nom" id="nom" class="input-champs" placeholder="Entrez votre nom..." />
+        <input type="mail" name="mail" id="mail" class="input-champs" placeholder="Entrez votre adresse mail..." />
+        <input type="mail" name="confirmmail" id="confirmmail" class="input-champs"
+          placeholder="Confirmez votre adresse mail..." />
+        <div id="suivant1" class="submit-btn">Étape suivante</div>
+        <div class="message-lien" id="alreadyAccount">Déjà un compte ici ? <a href="#">Se connecter</a></div>
+      </form>
+
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------INSCRIPTION 2/3  ---------------------->
+      <!-- -------------------------------------------------------- -->
+
+      <form id="register2" action="javascript:void(0);" class="input-groupe">
+        <input type="password" name="motdepasse" id="motdepasse" class="input-champs"
+          placeholder="Entrez votre mot de passe" />
+        <input type="password" name="confirmmotdepasse" id="confirmmotdepasse" class="input-champs"
+          placeholder="Confirmez votre mot de passe" />
+        <div id="suivant2" class="submit-btn">Étape suivante</div>
+      </form>
+
+
+      <!-- -------------------------------------------------------- -->
+      <!-- -------------------INSCRIPTION 3/3  ---------------------->
+      <!-- -------------------------------------------------------- -->
+
+
+      <form id="register3" action="javascript:void(0);" class="input-groupe">
+        <div class="input-champs">Afin de finaliser votre inscription veuillez accepter les termes du contrat
+          <ul>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Lorem ipsum dolor sit amet</li>
+          </ul>
+        </div>
+        <input type="checkbox" name="rappel" id="myCheck" class="check-box" /><span>J'accepte les termes du
+          contrat</span>
+        <div id="suivant3" class="submit-btn">S'inscrire</div>
+      </form>
+    </div>
+
+
+
+    <div class="maquettage">Maquettage d'interfaces graphiques</div>
+    <div class="monnom">Brice Rabiega</div>
+    <div class="exemple-user">   const email = 'hello@lp.wd'<br>
+      const password = 'qwerty'</div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="./main.js"></script>
+
+
+</body>
+
+</html>
