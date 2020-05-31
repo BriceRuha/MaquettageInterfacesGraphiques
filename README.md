@@ -1,5 +1,5 @@
 # MaquettageInterfacesGraphiques
 
-# Brice Rabiega
-# lien de la maquette Figma : 
-# lien netlify : 
+Brice Rabiega
+lien de la maquette Figma : 
+lien netlify : 
